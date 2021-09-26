@@ -1,0 +1,20 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/pantina/Desktop/farmbox-backend/app/controllers/home_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/home/pantina/Desktop/farmbox-backend/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      }
+    },
+    "timestamp": 1632631200
+  }
+}
