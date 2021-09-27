@@ -73,6 +73,12 @@ h1 {
   letter-spacing: 0.03em;
 }
 
+a#btn-back {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+
 @media only screen and (max-width: 700px) {
   section {
     background-color: blue;

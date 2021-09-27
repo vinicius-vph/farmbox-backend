@@ -13,7 +13,7 @@ describe 'User visit homepage' do
       expect(page).to have_selector(:css, 'nav img#nav-logo')
       expect(page).to have_link('Entrar')
     end
-    it 'Should be able view body content' do
+    it 'Should be able view main content' do
       visit root_path
 
       expect(page).to have_text('Bem vindo ao')
