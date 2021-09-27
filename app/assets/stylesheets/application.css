@@ -13,3 +13,75 @@
  *= require_tree .
  *= require_self
  */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body { 
+  width: 100vw;
+  min-width: 400px;
+  background-image: url('farmbox-institucional-1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top left;
+  background-size: cover;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+section {
+  height: 400px;
+}
+
+nav {
+  height: 70px;
+  padding: 0 10px;
+  background-color: transparent;
+  justify-content: space-between !important;
+}
+
+h1 {
+  font-size: 50px;
+  color: aliceblue;
+  margin-right: 10px;
+}
+
+.flex a {
+  height: 40px;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #739E08;
+  color: #FFF;
+  border: 2px solid #739E08;
+  box-shadow: 0px 1.86203px 4.32257px rgb(160 194 6 / 7%), 
+              0px 3.50603px 8.13901px rgb(160 194 6 / 9%), 0px 6.25417px 14.5186px rgb(160 194 6 / 10%), 
+              0px 11.6977px 27.1554px rgb(160 194 6 / 12%), 0px 28px 65px rgb(160 194 6 / 17%), 
+              inset 0px 11px 25px rgb(193 220 126 / 40%);
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s ease;
+  letter-spacing: 0.03em;
+}
+
+@media only screen and (max-width: 700px) {
+  section {
+    background-color: blue;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+  section img {
+    width: 40%;
+  }
+}
