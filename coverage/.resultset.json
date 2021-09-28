@@ -1,53 +1,9 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/pantina/Desktop/farmbox-backend/app/controllers/home_controller.rb": {
+      "/home/pantina/Desktop/farmbox-backend/spec/support/shoulda_matchers.rb": {
         "lines": [
           1,
-          1,
-          null
-        ]
-      },
-      "/home/pantina/Desktop/farmbox-backend/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
-      "/home/pantina/Desktop/farmbox-backend/spec/controllers/welcome_controller_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/pantina/Desktop/farmbox-backend/app/controllers/welcome_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/home/pantina/Desktop/farmbox-backend/spec/routing/home_routing_spec.rb": {
-        "lines": [
-          1,
-          null,
           1,
           1,
           1,
@@ -55,78 +11,28 @@
           null
         ]
       },
-      "/home/pantina/Desktop/farmbox-backend/spec/routing/welcome_routing_spec.rb": {
+      "/home/pantina/Desktop/farmbox-backend/app/models/user.rb": {
         "lines": [
           1,
-          null,
-          1,
-          1,
           1,
           null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          3,
           null
         ]
       },
-      "/home/pantina/Desktop/farmbox-backend/spec/system/user_visit_homepage_spec.rb": {
+      "/home/pantina/Desktop/farmbox-backend/app/models/application_record.rb": {
         "lines": [
           1,
-          null,
           1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null
-        ]
-      },
-      "/home/pantina/Desktop/farmbox-backend/spec/system/user_visit_welcome_page_spec.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          null,
           null
         ]
       }
     },
-    "timestamp": 1632776986
+    "timestamp": 1632790110
   }
 }
