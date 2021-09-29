@@ -6,5 +6,13 @@
         "workspaceRoot": "/home/pantina/Desktop/farmbox-backend",
         "workspacePath": "spec",
         "id": "kps5KaS9twQW6f3z"
+    },
+    {
+        "type": "Directory",
+        "name": "/home/pantina/Desktop/farmbox-backend/app/controllers",
+        "parent_id": null,
+        "workspaceRoot": "/home/pantina/Desktop/farmbox-backend",
+        "workspacePath": "app/controllers",
+        "id": "tZvrOsTeWjJGgScF"
     }
 ]

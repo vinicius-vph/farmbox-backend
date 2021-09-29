@@ -1,36 +1,41 @@
 module Api
   module V1
     class UsersController < ActionController::API
-      before_action :set_user, only: %i[show update destroy]
+      before_action :set_user_id, only: %i[show update destroy]
       before_action :set_new_user, only: %i[create]
 
       def show
-        render json: { message: 'Usuário encontrado com sucesso',
-                       data: @user.as_json(except: %i[id password_digest]) }, status: :ok
+        user = User.find_by!(id: @user_id)
+        render json: { data: user.as_json(except: %i[id password_digest]) }, status: :ok
+      rescue ActiveRecord::RecordNotFound
+        render json: { message: 'Parâmetros inválidos' }, status: :not_found
       end
 
       def update
-        if @user.update(user_params)
-          render json: { message: 'Usuário atualizado com sucesso',
-                         data: @user.as_json(except: %i[password_digest]) }, status: :ok
+        user = User.find_by!(id: @user_id)
+
+        if user.update(user_params)
+          render json: { data: user.as_json(except: %i[password_digest]) }, status: :ok
         else
-          render json: { message: 'Não foi possivel atualizar o usuário',
-                         data: @user.errors }, status: :unprocessable_entity
+          render json: { data: user.errors }, status: :unprocessable_entity
         end
+      rescue ActiveRecord::RecordNotFound
+        render json: { message: 'Parâmetros inválidos' }, status: :not_found
       end
 
       def create
         if @user.save
-          render json: { message: 'Usuário criado com sucesso',
-                         data: @user.as_json(except: %i[id password_digest]) }, status: :created
+          render json: { data: @user.as_json(except: %i[password_digest]) }, status: :created
         else
-          render json: { message: 'Não foi possivel criar o usuário',
-                         data: @user.errors }, status: :unprocessable_entity
+          render json: { data: @user.errors }, status: :unprocessable_entity
         end
       end
 
       def destroy
-        @user.destroy
+        user = User.find_by!(id: @user_id)
+
+        user.destroy
+
         head :no_content
       end
 
@@ -40,8 +45,8 @@ module Api
         params.require(:user).permit(:email, :password_digest)
       end
 
-      def set_user
-        @user = User.find(params[:id])
+      def set_user_id
+        @user_id = params[:id]
       end
 
       def set_new_user
