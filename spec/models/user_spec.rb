@@ -19,19 +19,17 @@ end
 
 describe User, type: :model do
   context 'Validates' do
-
     subject { User.new(email: 'jonh@doe.com', password_digest: '123456') }
     it { should validate_presence_of(:email) }
     it { should_not allow_value('jonhdoe.com').for(:email) }
     it { should_not validate_uniqueness_of(:email) }
 
     it { should validate_presence_of(:password_digest) }
-    it { should have_secure_password_digest(:password_digest) }
+    it { should have_secure_password }
     it { should validate_length_of(:password_digest).is_at_least(6) }
   end
   xcontext 'Format' do
     it 'before save' do
-      User.new(email: 'JONH@DOE.COM', password_digest: '')
     end
   end
 end
