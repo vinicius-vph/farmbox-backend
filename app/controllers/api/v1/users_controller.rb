@@ -1,6 +1,6 @@
 module Api
   module V1
-    class UsersController < ActionController::API
+    class UsersController < ApiController
       before_action :set_user_id, only: %i[show update destroy]
       before_action :set_new_user, only: %i[create]
 

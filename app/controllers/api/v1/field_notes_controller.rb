@@ -1,6 +1,6 @@
 module Api
   module V1
-    class FieldNotesController < ActionController::API
+    class FieldNotesController < ApiController
       before_action :set_field_note_id, only: %i[show update destroy]
       before_action :set_new_field_note, only: %i[create]
 
