@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   resources :welcome, only: %i[index]
+  resources :field_notes, only: %i[index show]
 
   namespace :api do
     namespace :v1 do

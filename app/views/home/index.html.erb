@@ -1,8 +1,8 @@
-<nav class='flex'>
+<nav class='d-flex justify-content-between align-items-center p-2'>
   <%= image_tag 'farmbox-logo.svg', alt: 'farmbox logo', id: 'nav-logo' %>
-  <%= link_to "Entrar", welcome_index_path %>
+  <%= link_to 'Entrar', welcome_index_path, class: 'btn btn-primary btn-lg' %>
 </nav>
-<section class='flex'>
+<section class='d-flex flex-row justify-content-center align-items-center pt-5'>
   <h1>Bem vindo ao</h1>
-  <%= image_tag 'logo_farmbox_site.png', alt: 'farmbox logo', class: 'flex' %>
+  <%= image_tag 'logo_farmbox_site.png', alt: 'farmbox logo' %>
 </section>

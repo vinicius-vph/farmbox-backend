@@ -1,0 +1,24 @@
+<section class='d-flex flex-column justify-content-center align-items-center py-5'>
+  <%= link_to 'Voltar', root_path, id: 'btn-back', class: 'btn btn-primary' %>
+  <h2 class="text-white">Anotações de Campo</h2>
+  <% if @field_notes.any? %>
+    <% @field_notes.each do |field_note| %>
+      <div class="card">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14458.897995259686!2d-43.240935643768275!3d-22.88217996945194!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997fd7541b22c9%3A0x191f936633d2a3b9!2sFiocruz!5e0!3m2!1spt-BR!2sbr!4v1637131123021!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="card-body">
+          <h5 class="card-title">Nota de campo <%= field_note.id %></h5>
+          <hr>
+          <span>Data/Hora: </span>
+          <span><%= field_note.date.to_date %></span>
+          <hr>
+          <span>Usuário: </span>
+          <span><%= User.find(field_note.user).email %></span>
+          <hr>
+          <a href="field_notes/<%= field_note.id%>" class="btn btn-warning">Ver nota</a>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <p>Nenhuma nota Cadastrada </p>
+  <% end %>
+</section>
